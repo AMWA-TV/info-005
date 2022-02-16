@@ -52,6 +52,14 @@ The IS-04 specification describes the requirements for Controllers in the docume
 ### IS-05 Device Connection Management
 > *Controllers use the **IS-05 Connection API** to make connections between Senders and Receivers.*
 
+Nodes on a media network may contain one or more Devices, each of which may include any number of Senders and Receivers. The IS-05 specification describes the mechanism for making connections between Senders and Receivers.
+
+The **IS-05 Connection API** is exposed by NMOS Devices. Controllers discover the URL of the Connection API through the list of `controls` for the Device. This is part of the information that will have been registered to the IS-04 Registry by the Device's parent Node. It is available to the Controller by querying the Registry using the IS-04 Query API and examining the information returned about the Device in question. 
+
+Controllers make connections between Senders and Receivers by making calls to the Connection APIs of their parent Devices. A Controller first calls the Connection API for the Sender to update its transport parameters as required and then obtain its transport file. It then calls the Connection API for the Receiver to provide it with the transport file and complete the connection.
+
+The IS-05 specification describes the requirements for Controllers in the document entitled [Controllers](https://github.com/jonathan-r-thorpe/is-05/blob/jonathan-r-thorpe-nmos-controller/docs/Controllers.md) (link to be updated after IS-04 PR accepted).
+
 ### IS-07 Event and Tally
 > *Controllers are able to identify **IS-07** Senders and Receivers in the **IS-04** Registry and make connections between them using **IS-05**.*
 
