@@ -47,6 +47,8 @@ The **IS-04 Query API** is also exposed by the Registry. Controllers discover th
 
 The **IS-04 Node API** is exposed by Nodes. It is used by other Nodes to discover information about a Node directly when there is no Registry available on the network (in peer-to-peer mode).
 
+![IS-04 Interactions in a Networked Media System](./images/IS-04_Interactions.svg)
+
 The IS-04 specification describes the requirements for Controllers in the document entitled [Controllers](https://github.com/AMWA-TV/is-04/blob/nmos-controller/docs/Controllers.md) (link to be updated after IS-04 PR accepted).
 
 ### IS-05 Device Connection Management
@@ -57,6 +59,8 @@ Nodes on a media network may contain one or more Devices, each of which may incl
 The **IS-05 Connection API** is exposed by NMOS Devices. Controllers discover the URL of the Connection API through the list of `controls` for the Device. This is part of the information that will have been registered to the IS-04 Registry by the Device's parent Node. It is available to the Controller by querying the Registry using the IS-04 Query API and examining the information returned about the Device in question. 
 
 Controllers make connections between Senders and Receivers by making calls to the Connection APIs of their parent Devices. A Controller first calls the Connection API for the Sender to update its transport parameters as required and then obtain its transport file. It then calls the Connection API for the Receiver to provide it with the transport file and complete the connection.
+
+![IS-05 Interactions in a Networked Media System](./images/IS-05_Interactions.svg)
 
 The IS-05 specification describes the requirements for Controllers in the document entitled [Controllers](https://github.com/jonathan-r-thorpe/is-05/blob/jonathan-r-thorpe-nmos-controller/docs/Controllers.md) (link to be updated after IS-05 PR accepted).
 
