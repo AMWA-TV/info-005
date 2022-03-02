@@ -58,7 +58,7 @@ The **IS-05 Connection API** is exposed by NMOS Devices. Controllers discover th
 
 Controllers make connections between Senders and Receivers by making calls to the Connection APIs of their parent Devices. A Controller first calls the Connection API for the Sender to update its transport parameters as required and then obtain its transport file. It then calls the Connection API for the Receiver to provide it with the transport file and complete the connection.
 
-The IS-05 specification describes the requirements for Controllers in the document entitled [Controllers](https://github.com/jonathan-r-thorpe/is-05/blob/jonathan-r-thorpe-nmos-controller/docs/Controllers.md) (link to be updated after IS-04 PR accepted).
+The IS-05 specification describes the requirements for Controllers in the document entitled [Controllers](https://github.com/jonathan-r-thorpe/is-05/blob/jonathan-r-thorpe-nmos-controller/docs/Controllers.md) (link to be updated after IS-05 PR accepted).
 
 ### IS-07 Event and Tally
 > *Controllers are able to identify **IS-07** Senders and Receivers in the **IS-04** Registry and make connections between them using **IS-05**.*
@@ -77,6 +77,14 @@ The IS-05 specification describes the requirements for Controllers in the docume
 
 ### BCP-003-01 Secure Communications in NMOS Systems
 > *Controllers use the **BCP-003-01 Secure Communications in NMOS Systems** best current practice recommendations to protect the API calls that they make with transport layer security.*
+
+The NMOS APIs use the HTTP and WebSocket protocols to exchange information between different components of a media network. However, unless a method of securing these communications is used, all information exchanged using the NMOS APIs is sent as plaintext. This means there is a risk that the information is intercepted and read by a third party. It is even possible that the information is modified without the knowledge of the original communicating parties. These types of person-in-the-middle attacks can be prevented by using standard IT best practices to ensure that the communication channel is secure.
+
+The BCP-003-01 document specifies which standard IT best practices to use. By listing specific practices which all BCP-003-01 compliant NMOS implementations follow, it ensures interoperability between products from different vendors.
+
+In particular, the document specifies the Transport Layer Security (TLS) versions and cipher suites to use for all NMOS HTTP and WebSocket communications. It additionally sets out the specific behaviour that is expected from the two communicating parties (the API server and API client).
+
+To aid implementers, requirements that are specific to Controllers have been set out in the [Controllers] section of the BCP-003-01 document. (Link to be updated after BCP-003-01 PR accepted).
 
 ### BCP-003-02 Authorization in NMOS Systems
 > *Controllers use the **BCP-003-02 Authorization in NMOS Systems** best current practice recommendations to ensure they meet the authorization requirements of the endpoints to which they are making API calls.*
