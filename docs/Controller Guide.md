@@ -88,7 +88,7 @@ The BCP-003-01 document specifies which standard IT best practices to use. By li
 
 In particular, the document specifies the Transport Layer Security (TLS) versions and cipher suites to use for all NMOS HTTP and WebSocket communications. It additionally sets out the specific behaviour that is expected from the two communicating parties (the API server and API client).
 
-To aid implementers, requirements that are specific to Controllers have been set out in the [Controllers] section of the BCP-003-01 document. (Link to be updated after BCP-003-01 PR accepted).
+To aid implementers, requirements that are specific to Controllers have been set out in the [Controllers](https://github.com/jonathan-r-thorpe/bcp-003-01/blob/jonathan-r-thorpe-nmos-controller/docs/Controllers.md) section of the BCP-003-01 document. (Link to be updated after BCP-003-01 PR accepted).
 
 ### BCP-003-02 Authorization in NMOS Systems
 > *Controllers use the **BCP-003-02 Authorization in NMOS Systems** best current practice recommendations to ensure they meet the authorization requirements of the endpoints to which they are making API calls.*
