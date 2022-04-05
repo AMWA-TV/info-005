@@ -1,10 +1,10 @@
-amwa_id: INFO-CONTROLLER
-url: https://specs.amwa.tv/nmos-implementation-guide-controller
-name: AMWA Implementation Guide for NMOS Controllers
+amwa_id: INFO-005
+url: https://specs.amwa.tv/info-005
+name: Implementation Guide for NMOS Controllers
 status: Work In Progress
-repo_name: nmos-implementation-guide-controller
-alt_repo_name: nmos-implementation-guide-template
-repo_url: https://github.com/AMWA-TV/nmos-implementation-guide-controller
+repo_name: info-005
+alt_repo_name: nmos-implementation-guide-controller
+repo_url: https://github.com/AMWA-TV/info-005
 releases:
 default_branch: main
-show_in_index: false
+show_in_index: true
