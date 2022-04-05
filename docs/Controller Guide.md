@@ -3,7 +3,12 @@
 ## Scope
 This document is intended as a guide for implementers or users of Controllers within NMOS-enabled networked media systems. The document defines what a Controller is and outlines the requirements of a Controller with respect to each existing NMOS specification through references to the relevant sections of those documents.
 
-The document focuses primarily on guidance for the core NMOS specifications of IS-04, IS-05 and BCP-003-01. However, this is a living document and it is intended that fuller guidance for other NMOS specifications be added in future.
+The document focuses primarily on guidance for the following NMOS specifications:
+* IS-04
+* IS-05
+* BCP-003-01
+
+However, this is a living document and it is intended that fuller guidance for other NMOS specifications be added in future.
 
 ## Use of Normative Language
 This document is a guide to Controllers only and not a specification itself. It provides informational guidance around the normative requirements of the relevant specifications. If there are any inconsistencies between this guide and the specifications then, unequivocally, the specification is correct. Any normative language key words found in this document are not to be interpreted as RFC 2119 key words.
@@ -13,11 +18,9 @@ A Controller is Client software that interacts with the NMOS APIs to discover, c
 
 ![Role of NMOS Controller in a Networked Media System](./images/NMOS_Controller.svg)
 
-The EBU have also produced a useful diagram showing the role of Controllers within a wider context (link to be added).
+This guide covers only how the Controller interacts with the NMOS APIs. It does not include other aspects such as presentation or other features of the Client software.
 
-This guide will cover only how the Controller interacts with the NMOS APIs. It will not include other aspects such as presentation or other features of the Client software.
-
-Where a Controller is additionally acting as an Node (e.g. receiving monitoring information via IS-07), this guide will not cover any requirements relating to this.
+Where a Controller is additionally acting as an Node (e.g. receiving monitoring information via IS-07), this guide does not cover any requirements relating to this.
 
 This guide and the associated NMOS specifications often refer to the "user" of a Controller. This includes both human operators who drive the Controller manually and automation systems that drive the Controller programmatically.
 
@@ -34,18 +37,18 @@ This will open a window with a description of the Request and Response for that 
 
 These, along with the provided JSON schemas and examples, often contain canonical definitions not described in the supporting text.
 
-Similarly be aware of the [NMOS Parameter Registers](https://specs.amwa.tv/nmos-parameter-registers/) as this contains constant definitions used by many of the specifications.
+Similarly be aware of the [NMOS Parameter Registers](https://specs.amwa.tv/nmos-parameter-registers/) as this contains definitions used by many of the specifications.
 
 ### IS-04 Discovery and Registration
 > *Controllers use the **IS-04 Query API** to discover and obtain updates on the NMOS resources that are available on the network.*
 
-The IS-04 specification describes the mechanism for the discovery and registration of NMOS resources within a media network. It comprises three APIs: the Registration API, the Query API and the Node API. Only the Query API has relevance to Controllers, but a brief summary of each API is given below for context.
+The IS-04 specification describes the mechanism for the discovery and registration of NMOS resources within a media network. It comprises three APIs: the Registration API, the Query API and the Node API. A brief summary of each API is given below.
 
-The **IS-04 Registration API** is exposed by the Registry. When a Node first joins the network, it uses [DNS-SD](https://specs.amwa.tv/info-004/) to discover the URL of the Registration API. It then uses the Registration API to register information about itself and all its sub-resources (Devices, Senders, Receivers, Sources and Flows). Each Node then communicates with the Registration API with a regular heatbeat message to let the Registry know that it is still on the network. Nodes also use the Registration API to update the information about themselves in the Registry whenever something changes. 
+The **IS-04 Registration API** is exposed by the Registry. When a Node first joins the network, it uses [DNS-SD](https://specs.amwa.tv/info-004/) (or mDNS) to discover the URL of the Registration API. It then uses the Registration API to register information about itself and all its sub-resources (Devices, Senders, Receivers, Sources and Flows). Each Node then communicates with the Registration API with a regular heatbeat message to let the Registry know that it is still on the network. Nodes also use the Registration API to update the information about themselves in the Registry whenever something changes. 
 
-The **IS-04 Query API** is also exposed by the Registry. Controllers discover the URL of the Query API using DNS-SD and then obtain an up-to-date list of all registered Nodes and sub-resources (Devices, Senders, Receivers, Sources and Flows) so that they can indicate to the user the currently available resources on the network. Controllers also use the Query API to set up websockets subscriptions to resources, so that they obtain updates every time something changes in the Registry.
+The **IS-04 Query API** is also exposed by the Registry. Controllers discover the URL of the Query API using DNS-SD (or mDNS) and then obtain an up-to-date list of all registered Nodes and sub-resources (Devices, Senders, Receivers, Sources and Flows) so that they can indicate to the user the currently available resources on the network. Controllers also use the Query API to set up websockets subscriptions to resources, so that they obtain updates every time something changes in the Registry.
 
-The **IS-04 Node API** is exposed by Nodes. It is used by other Nodes to discover information about a Node directly when there is no Registry available on the network (in peer-to-peer mode).
+The **IS-04 Node API** is exposed by Nodes. It is used by Controllers or other Nodes to discover information about a Node directly when there is no Registry available on the network (in peer-to-peer mode).
 
 ![IS-04 Interactions in a Networked Media System](./images/IS-04_Interactions.svg)
 
@@ -58,7 +61,11 @@ Nodes on a media network may contain one or more Devices, each of which may incl
 
 The **IS-05 Connection API** is exposed by NMOS Devices. Controllers discover the URL of the Connection API through the list of `controls` for the Device. This is part of the information that will have been registered to the IS-04 Registry by the Device's parent Node. It is available to the Controller by querying the Registry using the IS-04 Query API and examining the information returned about the Device in question. 
 
-Controllers make connections between Senders and Receivers by making calls to the Connection APIs of their parent Devices. A Controller first calls the Connection API for the Sender to update its transport parameters as required and then obtain its transport file. It then calls the Connection API for the Receiver to provide it with the transport file and complete the connection.
+Controllers make connections between Senders and Receivers by making calls to the Connection APIs of their parent Devices.
+
+As an example, for RTP-based connections this involves the following two steps. The Controller first calls the Connection API for the Sender to update its transport parameters as required and then obtain its transport file. It then calls the Connection API for the Receiver to provide it with the transport file and complete the connection.
+
+Note that some other types of connection such as WebSocket or MQTT follow a similar pattern but do not use transport files.
 
 ![IS-05 Interactions in a Networked Media System](./images/IS-05_Interactions.svg)
 
