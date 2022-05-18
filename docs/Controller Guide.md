@@ -35,9 +35,9 @@ The sections below describe how Controllers interact with the NMOS suite of Inte
 
 All of the specifications referenced below can be accessed from the [AMWA NMOS](https://specs.amwa.tv/nmos/) website.
 
-As well as reading the text of the specifications, a fuller understanding of the described API can be achieved by paying particular attention to the API section (for instance, the [IS-04 Query API](https://specs.amwa.tv/is-04/releases/v1.3.1/APIs/QueryAPI.html)).
+As well as reading the text of the specifications, a fuller understanding of the described API can be achieved by paying particular attention to the API section (for instance, the [IS-04 Query API](https://specs.amwa.tv/is-04/releases/v1.3.2/APIs/QueryAPI.html)).
 
-APIs can be investigated by clicking on the HTTP methods for each endpoint listed (click [here](https://specs.amwa.tv/is-04/releases/v1.3.1/APIs/QueryAPI.html#senders_get) for an example).
+APIs can be investigated by clicking on the HTTP methods for each endpoint listed (click [here](https://specs.amwa.tv/is-04/releases/v1.3.2/APIs/QueryAPI.html#senders_get) for an example).
 This will open a window with a description of the Request and Response for that HTTP method.
 
 These, along with the provided JSON schemas and examples, often contain canonical definitions not described in the supporting text.
@@ -58,7 +58,7 @@ The **IS-04 Node API** is exposed by Nodes. It is used by Controllers or other N
 
 ![IS-04 Interactions in a Networked Media System](./images/IS-04_Interactions.svg)
 
-The IS-04 specification describes the requirements for Controllers in the document entitled [Controllers](https://github.com/AMWA-TV/is-04/blob/nmos-controller/docs/Controllers.md) (link to be updated after IS-04 PR accepted).
+The IS-04 specification describes the requirements for Controllers in the document entitled [Controllers](https://specs.amwa.tv/is-04/releases/v1.3.2/docs/Controllers.html).
 
 ### IS-05 Device Connection Management
 
@@ -76,7 +76,7 @@ Note that some other types of connection such as WebSocket or MQTT follow a simi
 
 ![IS-05 Interactions in a Networked Media System](./images/IS-05_Interactions.svg)
 
-The IS-05 specification describes the requirements for Controllers in the document entitled [Controllers](https://github.com/jonathan-r-thorpe/is-05/blob/jonathan-r-thorpe-nmos-controller/docs/Controllers.md) (link to be updated after IS-05 PR accepted).
+The IS-05 specification describes the requirements for Controllers in the document entitled [Controllers](https://specs.amwa.tv/is-05/releases/v1.1.2/docs/Controllers.html).
 
 ### IS-07 Event and Tally
 
@@ -108,7 +108,7 @@ The BCP-003-01 document specifies which standard IT best practices to use. By li
 
 In particular, the document specifies the Transport Layer Security (TLS) versions and cipher suites to use for all NMOS HTTP and WebSocket communications. It additionally sets out the specific behaviour that is expected from the two communicating parties (the API server and API client).
 
-To aid implementers, requirements that are specific to Controllers have been set out in the [Controllers](https://github.com/jonathan-r-thorpe/bcp-003-01/blob/jonathan-r-thorpe-nmos-controller/docs/Controllers.md) section of the BCP-003-01 document. (Link to be updated after BCP-003-01 PR accepted).
+To aid implementers, requirements that are specific to Controllers have been set out in the [Controllers](https://specs.amwa.tv/bcp-003-01/releases/v1.0.1/docs/Controllers.html) section of the BCP-003-01 document.
 
 ### BCP-003-02 Authorization in NMOS Systems
 
