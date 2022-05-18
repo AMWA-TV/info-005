@@ -106,23 +106,23 @@ The IS-05 specification describes the requirements for Controllers in the docume
 
 ### IS-08 Audio Channel Mapping
 
-> *Controllers use the **IS-08 Channel Mapping API** to indicate the current mapping of audio channel inputs to outputs within a device and allow a User of the Controller to modify these.*
+> *Controllers can use the **IS-08 Channel Mapping API** to indicate the current mapping of audio channel inputs to outputs within a device and allow a User of the Controller to modify these.*
 
 ### IS-09 System Parameters
 
-> *Controllers use the **IS-09 System API** to obtain information about the location of system logging servers to which they are able to post their logs.*
+> *Controllers can use the **IS-09 System API** to obtain information about the location of system logging servers to which they are able to post their logs.*
 
 ### IS-10 Authorization
 
-> *Controllers use the **IS-10 Authorization API** to enable them to make authorized calls to all other APIs.*
+> *Controllers can use the **IS-10 Authorization API** to enable them to make authorized calls to all other APIs.*
 
 ### BCP-002-01 Natural Grouping
 
-> *Controllers use the **BCP-002-01 Natural Grouping** best current practice recommendations to allow them to understand associations between logical groups of NMOS Senders or Receivers.*
+> *Controllers can use the **BCP-002-01 Natural Grouping** best current practice recommendations to allow them to understand associations between logical groups of NMOS Senders or Receivers.*
 
 ### BCP-003-01 Secure Communication in NMOS Systems
 
-> *Controllers use the **BCP-003-01 Secure Communication in NMOS Systems** best current practice recommendations to protect the API calls that they make with transport layer security.*
+> *Secure Controllers use the **BCP-003-01 Secure Communication in NMOS Systems** best current practice recommendations to protect the API calls that they make with transport layer security.*
 
 The NMOS APIs use the HTTP and WebSocket protocols to exchange information between different components of a media network.
 However, unless a method of securing these communications is used, all information exchanged using the NMOS APIs is sent as plaintext.
@@ -140,15 +140,15 @@ To aid implementers, requirements that are specific to Controllers have been set
 
 ### BCP-003-02 Authorization in NMOS Systems
 
-> *Controllers use the **BCP-003-02 Authorization in NMOS Systems** best current practice recommendations to ensure they meet the authorization requirements of the endpoints to which they are making API calls.*
+> *Controllers can use the **BCP-003-02 Authorization in NMOS Systems** best current practice recommendations to ensure they meet the authorization requirements of the endpoints to which they are making API calls.*
 
 ### BCP-003-03 Certificate Provisioning in NMOS Systems
 
-> *Controllers use the **BCP-003-03 Certificate Provisioning in NMOS Systems** best current practice recommendations to obtain and refresh Client certificates for **BCP-003-01** transport layer security.*
+> *Controllers can use the **BCP-003-03 Certificate Provisioning in NMOS Systems** best current practice recommendations to obtain and refresh Client certificates for **BCP-003-01** transport layer security.*
 
 ### BCP-004-01 Receiver Capabilities
 
-> *Controllers use the **BCP-004-01 Receiver Capabilities** best current practice recommendations to determine whether a Receiver is capable of receiving a Flow from a Sender.*
+> *Controllers can use the **BCP-004-01 Receiver Capabilities** best current practice recommendations to determine whether a Receiver is capable of receiving a Flow from a Sender.*
 
 [Glossary]: https://specs.amwa.tv/nmos/main/docs/Glossary.html "NMOS Glossary"
 [RFC-2119]: https://tools.ietf.org/html/rfc2119 "Key words for use in RFCs"
