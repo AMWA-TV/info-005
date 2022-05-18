@@ -50,7 +50,7 @@ This will open a window with a description of the Request and Response for that 
 
 These, along with the provided JSON schemas and examples, often contain canonical definitions not described in the supporting text.
 
-Similarly be aware of the [NMOS Parameter Registers](https://specs.amwa.tv/nmos-parameter-registers/) as this contains definitions used by many of the specifications.
+Similarly be aware of the [NMOS Parameter Registers](https://specs.amwa.tv/nmos-parameter-registers/) as these contain definitions used by many of the specifications.
 
 ### IS-04 Discovery and Registration
 
