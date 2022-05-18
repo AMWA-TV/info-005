@@ -18,7 +18,7 @@ The [NMOS Glossary][Glossary] defines several common terms that have specific me
 
 This document is a guide to Controllers only and not a specification itself.
 It provides informational guidance around the normative requirements of the relevant specifications.
-If there are any inconsistencies between this guide and the specifications then, unequivocally, the specification is correct
+If there are any inconsistencies between this guide and the specifications then, unequivocally, the specification is correct.
 Any conformance language key words found in this document are not to be interpreted as [RFC 2119][RFC-2119] key words.
 
 ## Controller Definition
