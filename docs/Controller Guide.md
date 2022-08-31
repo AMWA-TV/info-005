@@ -6,9 +6,10 @@ This document is intended as a guide for implementers or users of Controllers wi
 The document defines what a Controller is and outlines the requirements of a Controller with respect to each existing NMOS specification through references to the relevant sections of those documents.
 
 The document focuses primarily on guidance for the following NMOS specifications:
-* IS-04
-* IS-05
-* BCP-003-01
+
+- IS-04
+- IS-05
+- BCP-003-01
 
 However, this is a living document and it is intended that fuller guidance for other NMOS specifications be added in future.
 
@@ -28,9 +29,9 @@ The diagram below shows some of those API interactions with other NMOS system co
 
 ![Role of NMOS Controller in a Networked Media System](./images/NMOS_Controller.svg)
 
-* This document covers how the Controller interacts with the NMOS APIs only.
+- This document covers how the Controller interacts with the NMOS APIs only.
   It does not cover other features of the Controller software, such as presentation.
-* This document does not cover any requirements relating to where a Controller is additionally acting as a Node (e.g. receiving monitoring information via IS-07).
+- This document does not cover any requirements relating to where a Controller is additionally acting as a Node (e.g. receiving monitoring information via IS-07).
 
 Where this document refers to a User, this can include both human operators who drive a Controller manually and automation systems that drive a Controller programmatically.
 
