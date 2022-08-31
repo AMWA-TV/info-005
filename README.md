@@ -1,4 +1,4 @@
-# AMWA Implementation Guide for NMOS Controllers
+# AMWA INFO-005: Implementation Guide for NMOS Controllers
 
 [![Lint Status](https://github.com/AMWA-TV/nmos-implementation-guide-controller/workflows/Lint/badge.svg)](https://github.com/AMWA-TV/nmos-implementation-guide-controller/actions?query=workflow%3ALint)
 [![Render Status](https://github.com/AMWA-TV/nmos-implementation-guide-controller/workflows/Render/badge.svg)](https://github.com/AMWA-TV/nmos-implementation-guide-controller/actions?query=workflow%3ARender)
