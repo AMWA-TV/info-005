@@ -7,9 +7,9 @@ The document defines what a Controller is and outlines the requirements of a Con
 
 The document focuses primarily on guidance for the following NMOS specifications:
 
-- [IS-04](https://specs.amwa.tv/is-04) NMOS Discovery and Registration
-- [IS-05](https://specs.amwa.tv/is-05) NMOS Device Connection Management
-- [BCP-003-01](https://specs.amwa.tv/bcp-003-01) Secure Communication in NMOS Systems
+- [IS-04][IS-04] NMOS Discovery and Registration
+- [IS-05][IS-05] NMOS Device Connection Management
+- [BCP-003-01][BCP-003-01] Secure Communication in NMOS Systems
 
 However, this is a living document and it is intended that fuller guidance for other NMOS specifications be added in future.
 
@@ -57,7 +57,7 @@ Similarly be aware of the [NMOS Parameter Registers](https://specs.amwa.tv/nmos-
 
 > *Controllers use the **IS-04 Query API** to discover and obtain updates on the NMOS resources that are available on the network.*
 
-The IS-04 specification describes the mechanism for the discovery and registration of NMOS resources within a media network.
+The [IS-04][] specification describes the mechanism for the discovery and registration of NMOS resources within a media network.
 It comprises three APIs: the Registration API, the Query API and the Node API. A brief summary of each API is given below.
 
 The **IS-04 Registration API** is exposed by the Registry.
@@ -82,7 +82,7 @@ The IS-04 specification describes the requirements for Controllers in the docume
 > *Controllers use the **IS-05 Connection API** to make connections between Senders and Receivers.*
 
 Nodes on a media network can provide any number of Devices, each of which can have any number of Senders and Receivers.
-The IS-05 specification describes the mechanism for making connections between Senders and Receivers.
+The [IS-05][] specification describes the mechanism for making connections between Senders and Receivers.
 
 The **IS-05 Connection API** is exposed by NMOS Devices.
 Controllers discover the URL of the Connection API through the list of `controls` for the Device.
@@ -131,7 +131,7 @@ This means there is a risk that the information is intercepted and read by a thi
 It is even possible that the information is modified without the knowledge of the original communicating parties.
 These types of person-in-the-middle attacks can be prevented by using IT best practices to ensure that the communication channel is secure.
 
-The BCP-003-01 document specifies which standard IT best practices to use.
+The [BCP-003-01][] document specifies which standard IT best practices to use.
 By listing specific practices which all BCP-003-01 compliant NMOS implementations follow, it ensures interoperability between products from different vendors.
 
 In particular, the document specifies the Transport Layer Security (TLS) versions and cipher suites to use for all NMOS HTTP and WebSocket communications.
@@ -151,5 +151,8 @@ To aid implementers, requirements that are specific to Controllers have been set
 
 > *Controllers can use the **BCP-004-01 Receiver Capabilities** best current practice recommendations to determine whether a Receiver is capable of receiving a Flow from a Sender.*
 
+[BCP-003-01]: https://specs.amwa.tv/bcp-003-01 "Secure Communication in NMOS Systems"
 [Glossary]: https://specs.amwa.tv/nmos/main/docs/Glossary.html "NMOS Glossary"
+[IS-04]: https://specs.amwa.tv/is-04 "NMOS Discovery and Registration"
+[IS-05]: https://specs.amwa.tv/is-05 "NMOS Device Connection Management"
 [RFC-2119]: https://tools.ietf.org/html/rfc2119 "Key words for use in RFCs"
