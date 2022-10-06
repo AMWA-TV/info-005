@@ -7,9 +7,9 @@ The document defines what a Controller is and outlines the requirements of a Con
 
 The document focuses primarily on guidance for the following NMOS specifications:
 
-- IS-04
-- IS-05
-- BCP-003-01
+- [IS-04](https://specs.amwa.tv/is-04) NMOS Discovery and Registration
+- [IS-05](https://specs.amwa.tv/is-05) NMOS Device Connection Management
+- [BCP-003-01](https://specs.amwa.tv/bcp-003-01) Secure Communication in NMOS Systems
 
 However, this is a living document and it is intended that fuller guidance for other NMOS specifications be added in future.
 
