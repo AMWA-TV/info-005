@@ -151,7 +151,12 @@ To aid implementers, requirements that are specific to Controllers have been set
 
 > *Controllers can use the **BCP-004-01 Receiver Capabilities** best current practice recommendations to determine whether a Receiver is capable of receiving a Flow from a Sender.*
 
+The [BCP-004-01][] document specifies how an IS-04 Receiver can express parametric constraints on the types of streams that it is capable of consuming, and defines how Controllers evaluate whether a Sender satisfies these constraints, based on the target parameters specified for each constraint (such as IS-04 Flow attributes and SDP format-specific parameters).
+
+To aid implementers, requirements that are specific to Controllers have been set out in the [Behaviour: Controllers](https://specs.amwa.tv/bcp-004-01/releases/v1.0.0/docs/1.0._Receiver_Capabilities.html#behaviour-controllers) section of the BCP-004-01 document.
+
 [BCP-003-01]: https://specs.amwa.tv/bcp-003-01 "Secure Communication in NMOS Systems"
+[BCP-004-01]: https://specs.amwa.tv/bcp-004-01 "NMOS Receiver Capabilities"
 [Glossary]: https://specs.amwa.tv/nmos/main/docs/Glossary.html "NMOS Glossary"
 [IS-04]: https://specs.amwa.tv/is-04 "NMOS Discovery and Registration"
 [IS-05]: https://specs.amwa.tv/is-05 "NMOS Device Connection Management"
