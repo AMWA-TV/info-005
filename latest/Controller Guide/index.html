@@ -11,6 +11,8 @@
         <link rel="canonical" href="https://specs.amwa.tv/new/info-005/latest/Controller%20Guide/">
       
       
+        <link rel="prev" href="./..">
+      
       
       
         
@@ -21,7 +23,7 @@
     
     
       
-        <title>NMOS Controller Implementation Guide - AMWA INFO-005: Implementation Guide for NMOS Controllers</title>
+        <title>Controller Guide - AMWA INFO-005: Implementation Guide for NMOS Controllers</title>
       
     
     
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              NMOS Controller Implementation Guide
+              Controller Guide
             
           </span>
         </div>
@@ -217,6 +219,316 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documentation
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Documentation
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Controller Guide
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Controller Guide
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Scope
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-of-normative-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Use of Normative Language
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controller-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Controller Definition
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controller-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Controller Interactions
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controller Interactions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes-on-understanding-the-amwa-nmos-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Notes on Understanding the AMWA NMOS Specifications
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-04-discovery-and-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IS-04 Discovery and Registration
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-05-device-connection-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IS-05 Device Connection Management
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-07-event-and-tally" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IS-07 Event and Tally
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-08-audio-channel-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IS-08 Audio Channel Mapping
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-09-system-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IS-09 System Parameters
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-10-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        IS-10 Authorization
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bcp-002-01-natural-grouping" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BCP-002-01 Natural Grouping
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bcp-003-01-secure-communication-in-nmos-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BCP-003-01 Secure Communication in NMOS Systems
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bcp-003-02-authorization-in-nmos-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BCP-003-02 Authorization in NMOS Systems
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bcp-003-03-certificate-provisioning-in-nmos-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BCP-003-03 Certificate Provisioning in NMOS Systems
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bcp-004-01-receiver-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        BCP-004-01 Receiver Capabilities
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
