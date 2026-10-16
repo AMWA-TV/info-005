@@ -1,0 +1,16 @@
+legacy_url,legacy_status,target_url,target_status_current,mapping_class,legacy_content_type,legacy_location,target_content_type,target_effective_url
+https://specs.amwa.tv/info-005,200,https://specs.amwa.tv/info-005/,200,confirmed-inventory,text/html,https://specs.amwa.tv/info-005/,text/html,https://specs.amwa.tv/info-005/
+https://specs.amwa.tv/info-005/,200,https://specs.amwa.tv/info-005/,200,confirmed-inventory,text/html,,text/html,https://specs.amwa.tv/info-005/
+https://specs.amwa.tv/info-005/assets/css/style.css?v=,200,,,no-target-rule,text/css,,,
+https://specs.amwa.tv/info-005/assets/images/NMOS-logo.png,200,,,no-target-rule,image/png,,,
+https://specs.amwa.tv/info-005/assets/images/from-AMWA-logo.png,200,,,no-target-rule,image/png,,,
+https://specs.amwa.tv/info-005/branches/,200,,,no-target-rule,text/html,,,
+https://specs.amwa.tv/info-005/branches/main,200,,,no-target-rule,text/html,https://specs.amwa.tv/info-005/branches/main/,,
+https://specs.amwa.tv/info-005/branches/main/,200,,,no-target-rule,text/html,,,
+https://specs.amwa.tv/info-005/branches/main/docs/Controller_Guide.html,200,,,no-target-rule,text/html,,,
+https://specs.amwa.tv/info-005/branches/main/docs/images/IS-04_Interactions.svg,200,,,no-target-rule,image/svg+xml,,,
+https://specs.amwa.tv/info-005/branches/main/docs/images/IS-05_Interactions.svg,200,,,no-target-rule,image/svg+xml,,,
+https://specs.amwa.tv/info-005/branches/main/docs/images/NMOS_Controller.svg,200,,,no-target-rule,image/svg+xml,,,
+https://specs.amwa.tv/info-005/docs/Controller_Guide.html,404,https://specs.amwa.tv/info-005/Controller%20Guide/,404,expected-tree-not-currently-published,text/html,,text/html,https://specs.amwa.tv/info-005/Controller%20Guide/
+https://specs.amwa.tv/info-005/main/,200,,,no-target-rule,text/html,,,
+https://specs.amwa.tv/info-005/releases/,200,,,no-target-rule,text/html,,,
