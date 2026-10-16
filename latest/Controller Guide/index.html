@@ -8,7 +8,8 @@
       
       
       
-        <link rel="canonical" href="https://specs.amwa.tv/new/info-005/latest/Controller%20Guide/">
+        <link rel="canonical" href="https://specs.amwa.tv/info-005/latest/Controller%20Guide/">
+      
       
       
         <link rel="prev" href="./..">
@@ -19,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="zensical-0.0.62">
+      <meta name="generator" content="zensical-0.0.71">
     
     
       
@@ -30,7 +31,7 @@
       
         
       
-      <link rel="stylesheet" href="../assets/stylesheets/modern/main.ce62732f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.e442bf79.min.css">
       
       
 
@@ -67,14 +68,11 @@
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#nmos-controller-implementation-guide" class="md-skip">
-          Skip to content
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -260,18 +258,19 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+              
   
   Documentation
 
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+                  
   
   
     
@@ -524,10 +523,11 @@
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -767,8 +767,10 @@
             <div class="md-content" data-md-component="content">
               
               <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
                 
                   
+
   
   
 
@@ -812,7 +814,7 @@ This will open a window with a description of the Request and Response for that 
 <p>Similarly be aware of the <a href="https://specs.amwa.tv/nmos-parameter-registers/">NMOS Parameter Registers</a> as these contain definitions used by many of the specifications.</p>
 <h3 id="is-04-discovery-and-registration">IS-04 Discovery and Registration</h3>
 <blockquote>
-<p><em>Controllers use the </em><em>IS-04 Query API</em><em> to discover and obtain updates on the NMOS resources that are available on the network.</em></p>
+<p><em>Controllers use the <strong>IS-04 Query API</strong> to discover and obtain updates on the NMOS resources that are available on the network.</em></p>
 </blockquote>
 <p>The <a href="https://specs.amwa.tv/is-04" title="NMOS Discovery and Registration">IS-04</a> specification describes the mechanism for the discovery and registration of NMOS resources within a media network.
 It comprises three APIs: the Registration API, the Query API and the Node API. A brief summary of each API is given below.</p>
@@ -830,7 +832,7 @@ It is used by Controllers or other Nodes to discover information about a Node di
 <p>The IS-04 specification describes the requirements for Controllers in the document entitled <a href="https://specs.amwa.tv/is-04/releases/v1.3.2/docs/Controllers.html">Controllers</a>.</p>
 <h3 id="is-05-device-connection-management">IS-05 Device Connection Management</h3>
 <blockquote>
-<p><em>Controllers use the </em><em>IS-05 Connection API</em><em> to make connections between Senders and Receivers.</em></p>
+<p><em>Controllers use the <strong>IS-05 Connection API</strong> to make connections between Senders and Receivers.</em></p>
 </blockquote>
 <p>Nodes on a media network can provide any number of Devices, each of which can have any number of Senders and Receivers.
 The <a href="https://specs.amwa.tv/is-05" title="NMOS Device Connection Management">IS-05</a> specification describes the mechanism for making connections between Senders and Receivers.</p>
@@ -847,27 +849,27 @@ It then calls the Connection API for the Receiver to provide it with the transpo
 <p>The IS-05 specification describes the requirements for Controllers in the document entitled <a href="https://specs.amwa.tv/is-05/releases/v1.1.2/docs/Controllers.html">Controllers</a>.</p>
 <h3 id="is-07-event-and-tally">IS-07 Event and Tally</h3>
 <blockquote>
-<p><em>Controllers are able to identify </em><em>IS-07</em><em> Senders and Receivers in the </em><em>IS-04</em><em> Registry and make connections between them using </em><em>IS-05</em><em>.</em></p>
+<p><em>Controllers are able to identify <strong>IS-07</strong> Senders and Receivers in the <strong>IS-04</strong> Registry and make connections between them using <strong>IS-05</strong>.</em></p>
 </blockquote>
 <h3 id="is-08-audio-channel-mapping">IS-08 Audio Channel Mapping</h3>
 <blockquote>
-<p><em>Controllers can use the </em><em>IS-08 Channel Mapping API</em><em> to indicate the current mapping of audio channel inputs to outputs within a device and allow a User of the Controller to modify these.</em></p>
+<p><em>Controllers can use the <strong>IS-08 Channel Mapping API</strong> to indicate the current mapping of audio channel inputs to outputs within a device and allow a User of the Controller to modify these.</em></p>
 </blockquote>
 <h3 id="is-09-system-parameters">IS-09 System Parameters</h3>
 <blockquote>
-<p><em>Controllers can use the </em><em>IS-09 System API</em><em> to obtain information about the location of system logging servers to which they are able to post their logs.</em></p>
+<p><em>Controllers can use the <strong>IS-09 System API</strong> to obtain information about the location of system logging servers to which they are able to post their logs.</em></p>
 </blockquote>
 <h3 id="is-10-authorization">IS-10 Authorization</h3>
 <blockquote>
-<p><em>Controllers can use the </em><em>IS-10 Authorization API</em><em> to enable them to make authorized calls to all other APIs.</em></p>
+<p><em>Controllers can use the <strong>IS-10 Authorization API</strong> to enable them to make authorized calls to all other APIs.</em></p>
 </blockquote>
 <h3 id="bcp-002-01-natural-grouping">BCP-002-01 Natural Grouping</h3>
 <blockquote>
-<p><em>Controllers can use the </em><em>BCP-002-01 Natural Grouping</em><em> best current practice recommendations to allow them to understand associations between logical groups of NMOS Senders or Receivers.</em></p>
+<p><em>Controllers can use the <strong>BCP-002-01 Natural Grouping</strong> best current practice recommendations to allow them to understand associations between logical groups of NMOS Senders or Receivers.</em></p>
 </blockquote>
 <h3 id="bcp-003-01-secure-communication-in-nmos-systems">BCP-003-01 Secure Communication in NMOS Systems</h3>
 <blockquote>
-<p><em>Secure Controllers use the </em><em>BCP-003-01 Secure Communication in NMOS Systems</em><em> best current practice recommendations to protect the API calls that they make with transport layer security.</em></p>
+<p><em>Secure Controllers use the <strong>BCP-003-01 Secure Communication in NMOS Systems</strong> best current practice recommendations to protect the API calls that they make with transport layer security.</em></p>
 </blockquote>
 <p>The NMOS APIs use the HTTP and WebSocket protocols to exchange information between different components of a media network.
 However, unless a method of securing these communications is used, all information exchanged using the NMOS APIs is sent as plaintext.
@@ -881,15 +883,15 @@ It additionally sets out the specific behaviour that is expected from the two co
 <p>To aid implementers, requirements that are specific to Controllers have been set out in the <a href="https://specs.amwa.tv/bcp-003-01/releases/v1.0.1/docs/Controllers.html">Controllers</a> section of the BCP-003-01 document.</p>
 <h3 id="bcp-003-02-authorization-in-nmos-systems">BCP-003-02 Authorization in NMOS Systems</h3>
 <blockquote>
-<p><em>Controllers can use the </em><em>BCP-003-02 Authorization in NMOS Systems</em><em> best current practice recommendations to ensure they meet the authorization requirements of the endpoints to which they are making API calls.</em></p>
+<p><em>Controllers can use the <strong>BCP-003-02 Authorization in NMOS Systems</strong> best current practice recommendations to ensure they meet the authorization requirements of the endpoints to which they are making API calls.</em></p>
 </blockquote>
 <h3 id="bcp-003-03-certificate-provisioning-in-nmos-systems">BCP-003-03 Certificate Provisioning in NMOS Systems</h3>
 <blockquote>
-<p><em>Controllers can use the </em><em>BCP-003-03 Certificate Provisioning in NMOS Systems</em><em> best current practice recommendations to obtain and refresh Client certificates for </em><em>BCP-003-01</em><em> transport layer security.</em></p>
+<p><em>Controllers can use the <strong>BCP-003-03 Certificate Provisioning in NMOS Systems</strong> best current practice recommendations to obtain and refresh Client certificates for <strong>BCP-003-01</strong> transport layer security.</em></p>
 </blockquote>
 <h3 id="bcp-004-01-receiver-capabilities">BCP-004-01 Receiver Capabilities</h3>
 <blockquote>
-<p><em>Controllers can use the </em><em>BCP-004-01 Receiver Capabilities</em><em> best current practice recommendations to determine whether a Receiver is capable of receiving a Flow from a Sender.</em></p>
+<p><em>Controllers can use the <strong>BCP-004-01 Receiver Capabilities</strong> best current practice recommendations to determine whether a Receiver is capable of receiving a Flow from a Sender.</em></p>
 </blockquote>
 <p>The <a href="https://specs.amwa.tv/bcp-004-01" title="NMOS Receiver Capabilities">BCP-004-01</a> document specifies how an IS-04 Receiver can express parametric constraints on the types of streams that it is capable of consuming, and defines how Controllers evaluate whether a Sender satisfies these constraints, based on the target parameters specified for each constraint (such as IS-04 Flow attributes and SDP format-specific parameters).</p>
 <p>To aid implementers, requirements that are specific to Controllers have been set out in the <a href="https://specs.amwa.tv/bcp-004-01/releases/v1.0.0/docs/1.0._Receiver_Capabilities.html#behaviour-controllers">Behaviour: Controllers</a> section of the BCP-004-01 document.</p>
@@ -936,7 +938,7 @@ It additionally sets out the specific behaviour that is expected from the two co
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
@@ -948,10 +950,10 @@ It additionally sets out the specific behaviour that is expected from the two co
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":[],"redirect":null,"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":{"provider":"mike"}}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":[],"redirect":null,"search":"../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":{"provider":"mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.8dcc8e9c.min.js"></script>
+      <script src="../assets/javascripts/bundle.a2388154.min.js"></script>
       
         <script src="../javascripts/json-viewer.js"></script>
       
